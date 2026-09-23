@@ -1,0 +1,20 @@
+{
+  "name": "ac-digital-studio",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Site vitrine AC DIGITAL STUDIO — HTML/CSS/JS modulaire, zéro dépendance runtime.",
+  "type": "module",
+  "engines": { "node": ">=18" },
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "lint": "node scripts/lint.mjs",
+    "preview": "node scripts/build.mjs --local && node scripts/serve.mjs dist 4173",
+    "dev": "node scripts/build.mjs --local && node scripts/serve.mjs dist 4173",
+    "test": "node scripts/build.mjs --local && node scripts/test.mjs",
+    "media": "node scripts/render-media.mjs",
+    "check": "npm run lint && npm run build && npm test"
+  },
+  "devDependencies": {
+    "playwright": "^1.56.0"
+  }
+}
