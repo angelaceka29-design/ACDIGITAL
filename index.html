@@ -1,0 +1,740 @@
+<!doctype html>
+<html lang="fr" data-intro>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#080808">
+  <meta name="color-scheme" content="dark">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,300..800&amp;family=Manrope:wght@400..700&amp;display=swap">
+  <script>
+    (function () {
+      var d = document.documentElement;
+      d.classList.add('js');
+      try {
+        var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        if (d.hasAttribute('data-intro') && !reduce && !sessionStorage.getItem('acds:intro')) d.classList.add('has-loader');
+      } catch (e) { /* stockage indisponible : pas de loader */ }
+      // Filet de sécurité : si le JS principal ne se charge pas, le contenu reste visible.
+      setTimeout(function () { d.classList.add('is-ready'); d.classList.remove('has-loader'); }, 4500);
+    })();
+  </script>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2064%2064%22%3E%3Crect%20width%3D%2264%22%20height%3D%2264%22%20rx%3D%2212%22%20fill%3D%22%23080808%22%2F%3E%3Cpath%20d%3D%22M9%2048%2020.5%2016h6L38%2048h-6.4l-2.4-7H17.8l-2.4%207Zm10.6-12.4h7.8L23.5%2024Z%22%20fill%3D%22%23fff%22%2F%3E%3Cpath%20d%3D%22M52.5%2024.2A9.6%209.6%200%200%200%2044%2019c-6%200-10%204.7-10%2013s4%2013%2010%2013a9.6%209.6%200%200%200%208.6-5.3%22%20fill%3D%22none%22%20stroke%3D%22%23fff%22%20stroke-width%3D%225.4%22%2F%3E%3Crect%20x%3D%2250%22%20y%3D%2241%22%20width%3D%227%22%20height%3D%227%22%20fill%3D%22%236c5cff%22%2F%3E%3C%2Fsvg%3E">
+  <link rel="stylesheet" href="style.css">
+  
+  <script src="main.js" defer></script>
+  <title>AC DIGITAL STUDIO | Communication, Web Design &amp; Création Digitale</title>
+  <meta name="description" content="AC DIGITAL STUDIO accompagne entreprises et entrepreneurs dans leur communication digitale, création de sites web, identité visuelle, flyers, cartes de visite et contenus créatifs.">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <link rel="canonical" href="https://angelaceka29-design.github.io/ACDIGITAL/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:site_name" content="AC Digital Studio">
+  <meta property="og:title" content="AC DIGITAL STUDIO | Communication, Web Design & Création Digitale">
+  <meta property="og:description" content="Studio créatif : sites web, UI/UX, identité visuelle, supports imprimés et contenus pour les réseaux sociaux.">
+  <meta property="og:url" content="https://angelaceka29-design.github.io/ACDIGITAL/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="AC DIGITAL STUDIO | Communication, Web Design & Création Digitale">
+  <meta name="twitter:description" content="Studio créatif : sites web, UI/UX, identité visuelle, supports imprimés et contenus pour les réseaux sociaux.">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "AC Digital Studio",
+    "url": "https://angelaceka29-design.github.io/ACDIGITAL/",
+    "description": "Studio créatif spécialisé en communication digitale, création de sites web, UI/UX design, identité visuelle, supports imprimés et contenus pour les réseaux sociaux.",
+    "knowsAbout": ["Communication digitale", "Création de sites web", "Web design", "UI/UX Design", "Identité visuelle", "Design graphique", "Flyers", "Cartes de visite", "Réseaux sociaux"]
+  }
+  </script>
+</head>
+<body>
+  <svg xmlns="http://www.w3.org/2000/svg" class="svg-sprite" aria-hidden="true" focusable="false">
+  <symbol id="i-instagram" viewBox="0 0 24 24"><path d="M7.0301.084c-1.2768.0602-2.1487.264-2.911.5634-.7888.3075-1.4575.72-2.1228 1.3877-.6652.6677-1.075 1.3368-1.3802 2.127-.2954.7638-.4956 1.6365-.552 2.914-.0564 1.2775-.0689 1.6882-.0626 4.947.0062 3.2586.0206 3.6671.0825 4.9473.061 1.2765.264 2.1482.5635 2.9107.308.7889.72 1.4573 1.388 2.1228.6679.6655 1.3365 1.0743 2.1285 1.38.7632.295 1.6361.4961 2.9134.552 1.2773.056 1.6884.069 4.9462.0627 3.2578-.0062 3.668-.0207 4.9478-.0814 1.28-.0607 2.147-.2652 2.9098-.5633.7889-.3086 1.4578-.72 2.1228-1.3881.665-.6682 1.0745-1.3378 1.3795-2.1284.2957-.7632.4966-1.636.552-2.9124.056-1.2809.0692-1.6898.063-4.948-.0063-3.2583-.021-3.6668-.0817-4.9465-.0607-1.2797-.264-2.1487-.5633-2.9117-.3084-.7889-.72-1.4568-1.3876-2.1228C21.2982 1.33 20.628.9208 19.8378.6165 19.074.321 18.2017.1197 16.9244.0645 15.6471.0093 15.236-.005 11.977.0014 8.718.0076 8.31.0215 7.0301.0839m.1402 21.6932c-1.17-.0509-1.8053-.2453-2.2287-.408-.5606-.216-.96-.4771-1.3819-.895-.422-.4178-.6811-.8186-.9-1.378-.1644-.4234-.3624-1.058-.4171-2.228-.0595-1.2645-.072-1.6442-.079-4.848-.007-3.2037.0053-3.583.0607-4.848.05-1.169.2456-1.805.408-2.2282.216-.5613.4762-.96.895-1.3816.4188-.4217.8184-.6814 1.3783-.9003.423-.1651 1.0575-.3614 2.227-.4171 1.2655-.06 1.6447-.072 4.848-.079 3.2033-.007 3.5835.005 4.8495.0608 1.169.0508 1.8053.2445 2.228.408.5608.216.96.4754 1.3816.895.4217.4194.6816.8176.9005 1.3787.1653.4217.3617 1.056.4169 2.2263.0602 1.2655.0739 1.645.0796 4.848.0058 3.203-.0055 3.5834-.061 4.848-.051 1.17-.245 1.8055-.408 2.2294-.216.5604-.4763.96-.8954 1.3814-.419.4215-.8181.6811-1.3783.9-.4224.1649-1.0577.3617-2.2262.4174-1.2656.0595-1.6448.072-4.8493.079-3.2045.007-3.5825-.006-4.848-.0608M16.953 5.5864A1.44 1.44 0 1 0 18.39 4.144a1.44 1.44 0 0 0-1.437 1.4424M5.8385 12.012c.0067 3.4032 2.7706 6.1557 6.173 6.1493 3.4026-.0065 6.157-2.7701 6.1506-6.1733-.0065-3.4032-2.771-6.1565-6.174-6.1498-3.403.0067-6.156 2.771-6.1496 6.1738M8 12.0077a4 4 0 1 1 4.008 3.9921A3.9996 3.9996 0 0 1 8 12.0077"/></symbol>
+  <symbol id="i-facebook" viewBox="0 0 24 24"><path d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647Z"/></symbol>
+  <symbol id="i-snapchat" viewBox="0 0 24 24"><path d="M12.206.793c.99 0 4.347.276 5.93 3.821.529 1.193.403 3.219.299 4.847l-.003.06c-.012.18-.022.345-.03.51.075.045.203.09.401.09.3-.016.659-.12 1.033-.301.165-.088.344-.104.464-.104.182 0 .359.029.509.09.45.149.734.479.734.838.015.449-.39.839-1.213 1.168-.089.029-.209.075-.344.119-.45.135-1.139.36-1.333.81-.09.224-.061.524.12.868l.015.015c.06.136 1.526 3.475 4.791 4.014.255.044.435.27.42.509 0 .075-.015.149-.045.225-.24.569-1.273.988-3.146 1.271-.059.091-.12.375-.164.57-.029.179-.074.36-.134.553-.076.271-.27.405-.555.405h-.03c-.135 0-.313-.031-.538-.074-.36-.075-.765-.135-1.273-.135-.3 0-.599.015-.913.074-.6.104-1.123.464-1.723.884-.853.599-1.826 1.288-3.294 1.288-.06 0-.119-.015-.18-.015h-.149c-1.468 0-2.427-.675-3.279-1.288-.599-.42-1.107-.779-1.707-.884-.314-.045-.629-.074-.928-.074-.54 0-.958.089-1.272.149-.211.043-.391.074-.54.074-.374 0-.523-.224-.583-.42-.061-.192-.09-.389-.135-.567-.046-.181-.105-.494-.166-.57-1.918-.222-2.95-.642-3.189-1.226-.031-.063-.052-.15-.055-.225-.015-.243.165-.465.42-.509 3.264-.54 4.73-3.879 4.791-4.02l.016-.029c.18-.345.224-.645.119-.869-.195-.434-.884-.658-1.332-.809-.121-.029-.24-.074-.346-.119-1.107-.435-1.257-.93-1.197-1.273.09-.479.674-.793 1.168-.793.146 0 .27.029.383.074.42.194.789.3 1.104.3.234 0 .384-.06.465-.105l-.046-.569c-.098-1.626-.225-3.651.307-4.837C7.392 1.077 10.739.807 11.727.807l.419-.015h.06z"/></symbol>
+  <symbol id="i-whatsapp" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h13M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"/></symbol>
+  <symbol id="i-arrow-up" viewBox="0 0 24 24"><path d="M12 19V6M6 12l6-6 6 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24"><path d="M5 5l14 14M19 5L5 19" fill="none" stroke="currentColor" stroke-width="1.6"/></symbol>
+</svg>
+
+  <div class="loader" data-loader aria-hidden="true">
+    <div class="loader__center">
+      <p class="loader__mark"><span class="loader__a">A</span><span class="loader__c">C</span><i class="pixel loader__pixel"></i></p>
+      <svg class="loader__line" viewBox="0 0 300 2" preserveAspectRatio="none"><line x1="0" y1="1" x2="300" y2="1"/></svg>
+      <p class="loader__name" data-loader-name>Digital Studio</p>
+    </div>
+    <p class="loader__count"><span data-loader-count>0</span><span class="loader__pct">%</span></p>
+    <div class="loader__panel loader__panel--top"></div>
+    <div class="loader__panel loader__panel--bottom"></div>
+  </div>
+
+  <a class="skip-link" href="#contenu">Aller au contenu</a>
+
+<header class="nav" data-nav>
+  <div class="nav__inner">
+    <a class="nav__logo" href="#accueil" aria-label="AC Digital Studio, retour à l’accueil">
+      <span class="logo-mark" aria-hidden="true">AC<i class="pixel"></i></span>
+      <span class="nav__logo-text">Digital Studio</span>
+    </a>
+
+    <nav class="nav__menu" aria-label="Navigation principale">
+      <ul class="nav__links">
+        <li><a class="nav__link" href="#accueil" data-nav-link="accueil">Accueil</a></li>
+        <li><a class="nav__link" href="#services" data-nav-link="services">Services</a></li>
+        <li><a class="nav__link" href="#projets" data-nav-link="projets">Projets</a></li>
+        <li><a class="nav__link" href="#studio" data-nav-link="studio">Studio</a></li>
+        <li><a class="nav__link" href="#contact" data-nav-link="contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <a class="btn btn--small btn--ghost nav__cta" href="#contact" data-magnetic>
+      <span class="btn__label" data-text="Démarrer un projet">Démarrer un projet</span>
+    </a>
+
+    <button class="nav__burger" type="button" aria-expanded="false" aria-controls="menu-mobile" data-menu-toggle>
+      <span class="visually-hidden" data-menu-label>Ouvrir le menu</span>
+      <span class="nav__burger-lines" aria-hidden="true"><i></i><i></i></span>
+    </button>
+  </div>
+</header>
+
+<div class="menu" id="menu-mobile" data-menu hidden>
+  <div class="menu__glow" aria-hidden="true"></div>
+  <nav class="menu__nav" aria-label="Menu mobile">
+    <ol class="menu__links">
+      <li><a class="menu__link" href="#accueil"><span class="menu__num" aria-hidden="true">01</span><span class="menu__word">Accueil</span></a></li>
+      <li><a class="menu__link" href="#services"><span class="menu__num" aria-hidden="true">02</span><span class="menu__word">Services</span></a></li>
+      <li><a class="menu__link" href="#projets"><span class="menu__num" aria-hidden="true">03</span><span class="menu__word">Projets</span></a></li>
+      <li><a class="menu__link" href="#studio"><span class="menu__num" aria-hidden="true">04</span><span class="menu__word">Studio</span></a></li>
+      <li><a class="menu__link" href="#contact"><span class="menu__num" aria-hidden="true">05</span><span class="menu__word">Contact</span></a></li>
+    </ol>
+  </nav>
+  <div class="menu__footer">
+    <a class="btn btn--primary menu__cta" href="#contact"><span class="btn__label" data-text="Démarrer un projet">Démarrer un projet</span></a>
+    <ul class="social social--row" aria-label="Réseaux sociaux">
+      <li><a class="social__link" href="#contact" data-social="instagram" aria-label="Instagram (nouvel onglet)"><svg class="icon" aria-hidden="true"><use href="#i-instagram"></use></svg><span class="social__name">Instagram</span></a></li>
+      <li><a class="social__link" href="#contact" data-social="facebook" aria-label="Facebook (nouvel onglet)"><svg class="icon" aria-hidden="true"><use href="#i-facebook"></use></svg><span class="social__name">Facebook</span></a></li>
+      <li><a class="social__link" href="#contact" data-social="snapchat" aria-label="Snapchat (nouvel onglet)"><svg class="icon" aria-hidden="true"><use href="#i-snapchat"></use></svg><span class="social__name">Snapchat</span></a></li>
+      <li><a class="social__link" href="#contact" data-social="whatsapp" aria-label="WhatsApp (nouvel onglet)"><svg class="icon" aria-hidden="true"><use href="#i-whatsapp"></use></svg><span class="social__name">WhatsApp</span></a></li>
+    </ul>
+  </div>
+</div>
+
+  <main id="contenu" tabindex="-1">
+
+    <!-- HERO -->
+    <section class="hero" id="accueil" aria-labelledby="hero-title">
+      <div class="hero__media" aria-hidden="true">
+        <picture>
+          <img class="hero__poster" src="data:image/webp;base64,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" alt="" width="1920" height="1080" fetchpriority="high" decoding="async">
+        </picture>
+        <video class="hero__video" muted loop playsinline preload="none" tabindex="-1" data-hero-video
+         
+         ></video>
+        <canvas class="hero__canvas" data-hero-canvas></canvas>
+        <div class="hero__shade"></div>
+        <div class="hero__grain"></div>
+      </div>
+
+      <div class="hero__content container">
+        <h1 class="hero__title" id="hero-title">
+          <span class="hero__brand" data-hero-item style="--i:0">AC Digital Studio<span class="hero__brand-sep" aria-hidden="true"></span><span class="hero__brand-sub">studio créatif indépendant</span></span>
+          <span class="hero__line hero__line--1"><span class="hero__word" data-hero-item style="--i:1">Communication<i class="pixel"></i></span></span>
+          <span class="hero__line hero__line--2"><span class="hero__word" data-hero-item style="--i:2">Design<i class="pixel"></i></span></span>
+          <span class="hero__line hero__line--3"><span class="hero__word" data-hero-item style="--i:3">Digital<i class="pixel"></i></span></span>
+        </h1>
+
+        <div class="hero__bottom">
+          <p class="hero__lead" data-hero-item style="--i:5">Nous transformons vos idées en expériences digitales qui marquent&nbsp;: identités, sites web et supports pensés pour faire la différence.</p>
+          <div class="hero__ctas" data-hero-item style="--i:6">
+            <a class="btn btn--primary" href="#services" data-magnetic><span class="btn__label" data-text="Découvrir nos services">Découvrir nos services</span></a>
+            <a class="btn btn--ghost" href="#contact" data-magnetic><span class="btn__label" data-text="Démarrer un projet">Démarrer un projet</span></a>
+          </div>
+          <div class="hero__aside" data-hero-item style="--i:7">
+            <ul class="social social--mini" aria-label="Réseaux sociaux">
+              <li><a class="social__link" href="#contact" data-social="instagram" aria-label="Instagram (nouvel onglet)"><svg class="icon" aria-hidden="true"><use href="#i-instagram"></use></svg><span class="social__name">Instagram</span></a></li>
+      <li><a class="social__link" href="#contact" data-social="facebook" aria-label="Facebook (nouvel onglet)"><svg class="icon" aria-hidden="true"><use href="#i-facebook"></use></svg><span class="social__name">Facebook</span></a></li>
+      <li><a class="social__link" href="#contact" data-social="snapchat" aria-label="Snapchat (nouvel onglet)"><svg class="icon" aria-hidden="true"><use href="#i-snapchat"></use></svg><span class="social__name">Snapchat</span></a></li>
+      <li><a class="social__link" href="#contact" data-social="whatsapp" aria-label="WhatsApp (nouvel onglet)"><svg class="icon" aria-hidden="true"><use href="#i-whatsapp"></use></svg><span class="social__name">WhatsApp</span></a></li>
+            </ul>
+            <a class="scroll-hint" href="#studio">
+              <span class="scroll-hint__track" aria-hidden="true"><span class="scroll-hint__thumb"></span></span>
+              <span>Scroll to explore</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INTRODUCTION / STUDIO -->
+    <section class="intro section" id="studio" aria-labelledby="intro-title">
+      <div class="container intro__grid">
+        <p class="section-tag" data-reveal="fade">Le studio</p>
+        <h2 class="intro__statement" id="intro-title" data-scroll-words>
+          Nous ne créons pas juste du design. Nous créons des expériences.
+        </h2>
+        <div class="intro__text">
+          <p data-reveal="fade">AC Digital Studio accompagne les entreprises, entrepreneurs et marques dans la création d’une communication forte, cohérente et moderne.</p>
+          <p data-reveal="fade" style="--d:120ms">Du site internet au support imprimé, chaque création est pensée pour renforcer votre image, et pour donner à votre audience une bonne raison de s’arrêter sur vous.</p>
+          <a class="u-link u-link--arrow" href="#processus" data-reveal="fade" style="--d:240ms">Voir comment nous travaillons <svg class="icon" aria-hidden="true"><use href="#i-arrow"></use></svg></a>
+        </div>
+      </div>
+
+      <ul class="pillars container" aria-label="Ce qui guide chaque projet">
+        <li class="pillar" data-reveal="fade" style="--d:0ms"><span class="pillar__word">Créativité</span><span class="pillar__text">Des idées qui ne ressemblent qu’à vous.</span></li>
+        <li class="pillar" data-reveal="fade" style="--d:80ms"><span class="pillar__word">Digital</span><span class="pillar__text">Des outils pensés pour aujourd’hui.</span></li>
+        <li class="pillar" data-reveal="fade" style="--d:160ms"><span class="pillar__word">Design</span><span class="pillar__text">Chaque détail au service du message.</span></li>
+        <li class="pillar" data-reveal="fade" style="--d:240ms"><span class="pillar__word">Stratégie</span><span class="pillar__text">Une direction claire avant le premier pixel.</span></li>
+        <li class="pillar" data-reveal="fade" style="--d:320ms"><span class="pillar__word">Communication</span><span class="pillar__text">Un discours cohérent partout où l’on vous voit.</span></li>
+      </ul>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="services section" id="services" aria-labelledby="services-title">
+      <div class="container">
+        <header class="section-head">
+          <p class="section-tag" data-reveal="fade">Expertises</p>
+          <h2 class="section-title" id="services-title" data-reveal="lines"><span class="line"><span>Nos services</span></span></h2>
+          <p class="section-lead" data-reveal="fade">Sept façons de rendre votre marque plus claire, plus belle et plus efficace. Un seul interlocuteur du premier croquis à la mise en ligne.</p>
+        </header>
+
+        <div class="services__layout">
+          <div class="services__stage" aria-hidden="true" data-services-stage>
+            <div class="services__counter">
+              <span class="services__index" data-services-index>01</span>
+              <span class="services__total">/07</span>
+            </div>
+            <div class="services__visuals">
+              <svg class="svis is-active" viewBox="0 0 320 240" data-svis="0">
+                <rect class="svis__s" x="30" y="40" width="260" height="170" rx="6"/>
+                <line class="svis__s" x1="30" y1="64" x2="290" y2="64"/>
+                <circle class="svis__f" cx="46" cy="52" r="3"/><circle class="svis__f" cx="58" cy="52" r="3"/><circle class="svis__f" cx="70" cy="52" r="3"/>
+                <rect class="svis__s" x="52" y="86" width="120" height="14"/>
+                <rect class="svis__s" x="52" y="110" width="80" height="8"/>
+                <rect class="svis__a" x="52" y="132" width="54" height="18"/>
+                <rect class="svis__s" x="190" y="86" width="78" height="100"/>
+                <line class="svis__s" x1="52" y1="186" x2="168" y2="186"/>
+              </svg>
+              <svg class="svis" viewBox="0 0 320 240" data-svis="1">
+                <circle class="svis__s" cx="160" cy="120" r="18"/>
+                <circle class="svis__s" cx="160" cy="120" r="46"/>
+                <circle class="svis__s" cx="160" cy="120" r="78"/>
+                <circle class="svis__s" cx="160" cy="120" r="110"/>
+                <rect class="svis__a" x="153" y="113" width="14" height="14"/>
+                <circle class="svis__f" cx="206" cy="120" r="4"/><circle class="svis__f" cx="105" cy="66" r="4"/><circle class="svis__f" cx="238" cy="178" r="4"/>
+              </svg>
+              <svg class="svis" viewBox="0 0 320 240" data-svis="2">
+                <rect class="svis__s" x="110" y="24" width="100" height="192" rx="14"/>
+                <rect class="svis__s" x="124" y="50" width="72" height="44"/>
+                <rect class="svis__s" x="124" y="104" width="72" height="10"/>
+                <rect class="svis__s" x="124" y="122" width="48" height="10"/>
+                <rect class="svis__a" x="124" y="176" width="72" height="20"/>
+                <path class="svis__s" d="M222 150 l0 44 l11 -10 l9 20 l8 -4 l-9 -19 l15 -1 z"/>
+              </svg>
+              <svg class="svis" viewBox="0 0 320 240" data-svis="3">
+                <line class="svis__s svis__thin" x1="20" y1="120" x2="300" y2="120"/>
+                <line class="svis__s svis__thin" x1="160" y1="10" x2="160" y2="230"/>
+                <circle class="svis__s" cx="130" cy="120" r="62"/>
+                <circle class="svis__s" cx="190" cy="120" r="62"/>
+                <rect class="svis__s" x="98" y="58" width="124" height="124"/>
+                <rect class="svis__a" x="222" y="170" width="12" height="12"/>
+              </svg>
+              <svg class="svis" viewBox="0 0 320 240" data-svis="4">
+                <rect class="svis__s" x="70" y="30" width="120" height="170" transform="rotate(-6 130 115)"/>
+                <rect class="svis__s" x="130" y="40" width="120" height="170"/>
+                <rect class="svis__a" x="146" y="58" width="88" height="70"/>
+                <rect class="svis__s" x="146" y="142" width="70" height="10"/>
+                <rect class="svis__s" x="146" y="160" width="50" height="6"/>
+                <rect class="svis__s" x="146" y="172" width="58" height="6"/>
+              </svg>
+              <svg class="svis" viewBox="0 0 320 240" data-svis="5">
+                <rect class="svis__s" x="56" y="70" width="170" height="100" rx="4" transform="rotate(-10 141 120)"/>
+                <rect class="svis__s" x="96" y="84" width="170" height="100" rx="4"/>
+                <rect class="svis__a" x="114" y="102" width="14" height="14"/>
+                <rect class="svis__s" x="114" y="146" width="80" height="8"/>
+                <rect class="svis__s" x="114" y="160" width="54" height="6"/>
+              </svg>
+              <svg class="svis" viewBox="0 0 320 240" data-svis="6">
+                <rect class="svis__s" x="72" y="30" width="54" height="54"/><rect class="svis__a" x="133" y="30" width="54" height="54"/><rect class="svis__s" x="194" y="30" width="54" height="54"/>
+                <rect class="svis__s" x="72" y="92" width="54" height="54"/><rect class="svis__s" x="133" y="92" width="54" height="54"/><rect class="svis__s" x="194" y="92" width="54" height="54"/>
+                <rect class="svis__s" x="72" y="154" width="54" height="54"/><rect class="svis__s" x="133" y="154" width="54" height="54"/><rect class="svis__s" x="194" y="154" width="54" height="54"/>
+                <path class="svis__s" d="M218 180 c-6 -8 -18 -2 -12 8 l12 12 l12 -12 c6 -10 -6 -16 -12 -8 z"/>
+              </svg>
+            </div>
+          </div>
+
+          <ol class="services__list">
+            <li class="service" data-service="0">
+              <span class="service__num" aria-hidden="true">01</span>
+              <div class="service__body">
+                <h3 class="service__title">Création de sites web</h3>
+                <div class="service__more"><div>
+                  <p class="service__desc">Sites modernes, performants, responsive et conçus autour de votre identité.</p>
+                  <ul class="service__tags"><li>Site vitrine</li><li>Landing page</li><li>Refonte</li></ul>
+                </div></div>
+              </div>
+            </li>
+            <li class="service" data-service="1">
+              <span class="service__num" aria-hidden="true">02</span>
+              <div class="service__body">
+                <h3 class="service__title">Communication digitale</h3>
+                <div class="service__more"><div>
+                  <p class="service__desc">Construire une présence digitale cohérente et efficace pour votre marque.</p>
+                  <ul class="service__tags"><li>Stratégie</li><li>Ligne éditoriale</li><li>Accompagnement</li></ul>
+                </div></div>
+              </div>
+            </li>
+            <li class="service" data-service="2">
+              <span class="service__num" aria-hidden="true">03</span>
+              <div class="service__body">
+                <h3 class="service__title">UI / UX Design</h3>
+                <div class="service__more"><div>
+                  <p class="service__desc">Des interfaces intuitives pensées pour offrir une expérience utilisateur claire et agréable.</p>
+                  <ul class="service__tags"><li>Parcours</li><li>Maquettes</li><li>Prototypes</li></ul>
+                </div></div>
+              </div>
+            </li>
+            <li class="service" data-service="3">
+              <span class="service__num" aria-hidden="true">04</span>
+              <div class="service__body">
+                <h3 class="service__title">Identité visuelle</h3>
+                <div class="service__more"><div>
+                  <p class="service__desc">Création et développement d’un univers graphique cohérent.</p>
+                  <ul class="service__tags"><li>Logo</li><li>Charte graphique</li><li>Univers de marque</li></ul>
+                </div></div>
+              </div>
+            </li>
+            <li class="service" data-service="4">
+              <span class="service__num" aria-hidden="true">05</span>
+              <div class="service__body">
+                <h3 class="service__title">Flyers &amp; supports imprimés</h3>
+                <div class="service__more"><div>
+                  <p class="service__desc">Flyers, affiches, brochures et supports promotionnels professionnels.</p>
+                  <ul class="service__tags"><li>Flyers</li><li>Affiches</li><li>Brochures</li></ul>
+                </div></div>
+              </div>
+            </li>
+            <li class="service" data-service="5">
+              <span class="service__num" aria-hidden="true">06</span>
+              <div class="service__body">
+                <h3 class="service__title">Cartes de visite</h3>
+                <div class="service__more"><div>
+                  <p class="service__desc">Des cartes de visite élégantes et cohérentes avec votre identité.</p>
+                  <ul class="service__tags"><li>Design recto verso</li><li>Fichiers prêts à imprimer</li></ul>
+                </div></div>
+              </div>
+            </li>
+            <li class="service" data-service="6">
+              <span class="service__num" aria-hidden="true">07</span>
+              <div class="service__body">
+                <h3 class="service__title">Réseaux sociaux</h3>
+                <div class="service__more"><div>
+                  <p class="service__desc">Création de contenus visuels adaptés à Instagram, Facebook et autres plateformes.</p>
+                  <ul class="service__tags"><li>Posts</li><li>Stories</li><li>Visuels publicitaires</li></ul>
+                </div></div>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJETS -->
+    <section class="work section" id="projets" aria-labelledby="work-title">
+      <div class="container">
+        <header class="section-head section-head--split">
+          <h2 class="section-title section-title--xl" id="work-title" data-reveal="lines"><span class="line"><span>Selected</span></span><span class="line"><span>work</span></span></h2>
+          <p class="section-lead" data-reveal="fade">Une sélection de projets du studio. Cliquez sur un projet pour découvrir son contexte, la démarche et les livrables.</p>
+        </header>
+
+        <div class="work__grid">
+          <article class="project project--wide" data-reveal="clip">
+            <button class="project__hit" type="button" data-project="identite" aria-haspopup="dialog" data-cursor="view">
+              <span class="project__media">
+                <svg class="art art--brand" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+                  <defs><radialGradient id="g-brand" cx="70%" cy="40%" r="60%"><stop offset="0" stop-color="#6C5CFF" stop-opacity=".55"/><stop offset="1" stop-color="#0d0d12" stop-opacity="0"/></radialGradient></defs>
+                  <rect width="1600" height="900" fill="#0d0d12"/><rect width="1600" height="900" fill="url(#g-brand)"/>
+                  <g fill="none" stroke="rgba(255,255,255,.14)" stroke-width="1.5">
+                    <line x1="0" y1="450" x2="1600" y2="450"/><line x1="1000" y1="0" x2="1000" y2="900"/>
+                    <circle cx="1000" cy="450" r="300"/><circle cx="1000" cy="450" r="190"/><line x1="560" y1="10" x2="1440" y2="890"/>
+                  </g>
+                  <path d="M810 690 L1000 210 L1190 690 H1110 L1000 400 L890 690 Z" fill="#fff"/>
+                  <rect x="1180" y="600" width="90" height="90" fill="#6C5CFF"/>
+                  <text x="120" y="780" fill="rgba(255,255,255,.5)" font-family="Manrope, sans-serif" font-size="30" letter-spacing="6">BRAND SYSTEM</text>
+                </svg>
+              </span>
+              <span class="project__meta">
+                <span class="project__cat">Brand identity</span>
+                <span class="project__title"><span class="project__title-in" data-text="[Nom du projet]">[Nom du projet]</span></span>
+                <span class="project__year">[Année]</span>
+              </span>
+            </button>
+          </article>
+
+          <article class="project project--left" data-reveal="clip">
+            <button class="project__hit" type="button" data-project="web" aria-haspopup="dialog" data-cursor="view">
+              <span class="project__media">
+                <svg class="art art--web" viewBox="0 0 1000 1200" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+                  <defs><linearGradient id="g-web" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3D7BFF"/><stop offset="1" stop-color="#8A4BFF"/></linearGradient></defs>
+                  <rect width="1000" height="1200" fill="#101014"/>
+                  <g transform="translate(150 190)">
+                    <rect width="700" height="820" rx="12" fill="#17171d" stroke="rgba(255,255,255,.12)"/>
+                    <rect x="0" y="0" width="700" height="48" rx="12" fill="#1d1d24"/>
+                    <circle cx="28" cy="24" r="6" fill="#3a3a44"/><circle cx="50" cy="24" r="6" fill="#3a3a44"/><circle cx="72" cy="24" r="6" fill="#3a3a44"/>
+                    <rect x="40" y="90" width="620" height="330" fill="url(#g-web)"/>
+                    <rect x="80" y="300" width="300" height="34" fill="#fff"/><rect x="80" y="350" width="200" height="16" fill="rgba(255,255,255,.7)"/>
+                    <rect x="40" y="460" width="190" height="150" fill="#22222a"/><rect x="255" y="460" width="190" height="150" fill="#22222a"/><rect x="470" y="460" width="190" height="150" fill="#22222a"/>
+                    <rect x="40" y="650" width="400" height="18" fill="#2c2c35"/><rect x="40" y="684" width="300" height="12" fill="#26262e"/>
+                  </g>
+                </svg>
+              </span>
+              <span class="project__meta">
+                <span class="project__cat">Web design</span>
+                <span class="project__title"><span class="project__title-in" data-text="[Nom du projet]">[Nom du projet]</span></span>
+                <span class="project__year">[Année]</span>
+              </span>
+            </button>
+          </article>
+
+          <article class="project project--right" data-reveal="clip">
+            <button class="project__hit" type="button" data-project="social" aria-haspopup="dialog" data-cursor="view">
+              <span class="project__media">
+                <svg class="art art--social" viewBox="0 0 1000 1200" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+                  <defs><linearGradient id="g-soc" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#6C5CFF"/><stop offset="1" stop-color="#3D7BFF"/></linearGradient></defs>
+                  <rect width="1000" height="1200" fill="#0e0e12"/>
+                  <g transform="translate(500 600) rotate(-12) translate(-390 -390)">
+                    <rect x="0" y="0" width="250" height="250" fill="url(#g-soc)"/><rect x="265" y="0" width="250" height="250" fill="#1b1b22"/><rect x="530" y="0" width="250" height="250" fill="#f2f2f2"/>
+                    <rect x="0" y="265" width="250" height="250" fill="#1b1b22"/><rect x="265" y="265" width="250" height="250" fill="#f2f2f2"/><rect x="530" y="265" width="250" height="250" fill="url(#g-soc)"/>
+                    <rect x="0" y="530" width="250" height="250" fill="#f2f2f2"/><rect x="265" y="530" width="250" height="250" fill="url(#g-soc)"/><rect x="530" y="530" width="250" height="250" fill="#1b1b22"/>
+                    <text x="300" y="170" fill="#fff" font-family="Bricolage Grotesque, sans-serif" font-size="90" font-weight="700">Aa</text>
+                    <rect x="590" y="340" width="130" height="130" fill="none" stroke="#fff" stroke-width="10"/>
+                  </g>
+                </svg>
+              </span>
+              <span class="project__meta">
+                <span class="project__cat">Social media</span>
+                <span class="project__title"><span class="project__title-in" data-text="[Nom du projet]">[Nom du projet]</span></span>
+                <span class="project__year">[Année]</span>
+              </span>
+            </button>
+          </article>
+
+          <article class="project project--offset" data-reveal="clip">
+            <button class="project__hit" type="button" data-project="print" aria-haspopup="dialog" data-cursor="view">
+              <span class="project__media">
+                <svg class="art art--print" viewBox="0 0 1600 1000" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+                  <rect width="1600" height="1000" fill="#131318"/>
+                  <g transform="translate(470 110) rotate(-7)"><rect width="480" height="680" fill="#f4f4f4"/><rect x="40" y="40" width="400" height="360" fill="#6C5CFF"/><rect x="40" y="440" width="300" height="42" fill="#0d0d12"/><rect x="40" y="500" width="220" height="16" fill="#8a8a8a"/><rect x="40" y="530" width="260" height="16" fill="#8a8a8a"/></g>
+                  <g transform="translate(960 470) rotate(8)"><rect width="420" height="240" fill="#0d0d12" stroke="rgba(255,255,255,.18)"/><rect x="36" y="36" width="34" height="34" fill="#6C5CFF"/><rect x="36" y="160" width="190" height="18" fill="#fff"/><rect x="36" y="190" width="130" height="10" fill="#777"/></g>
+                </svg>
+              </span>
+              <span class="project__meta">
+                <span class="project__cat">Print design</span>
+                <span class="project__title"><span class="project__title-in" data-text="[Nom du projet]">[Nom du projet]</span></span>
+                <span class="project__year">[Année]</span>
+              </span>
+            </button>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROCESS -->
+    <section class="process section" id="processus" aria-labelledby="process-title" data-process>
+      <div class="container">
+        <header class="section-head section-head--split">
+          <h2 class="section-title" id="process-title" data-reveal="lines"><span class="line"><span>Notre processus</span></span></h2>
+          <p class="section-lead" data-reveal="fade">Quatre étapes, une seule logique&nbsp;: comprendre avant de créer. Vous savez toujours où en est votre projet.</p>
+        </header>
+
+        <ol class="process__track">
+          <li class="process__rail" aria-hidden="true"><span class="process__fill" data-process-fill></span></li>
+          <li class="step" data-step="0">
+            <span class="step__num">01</span>
+            <h3 class="step__title">Discover</h3>
+            <p class="step__text">Comprendre votre activité, vos objectifs et votre audience.</p>
+          </li>
+          <li class="step" data-step="1">
+            <span class="step__num">02</span>
+            <h3 class="step__title">Strategy</h3>
+            <p class="step__text">Construire une direction claire&nbsp;: message, positionnement, univers visuel.</p>
+          </li>
+          <li class="step" data-step="2">
+            <span class="step__num">03</span>
+            <h3 class="step__title">Create</h3>
+            <p class="step__text">Transformer la stratégie en design, avec des allers-retours simples et rapides.</p>
+          </li>
+          <li class="step" data-step="3">
+            <span class="step__num">04</span>
+            <h3 class="step__title">Launch</h3>
+            <p class="step__text">Finaliser, optimiser et lancer le projet. Puis vous accompagner pour la suite.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- MARQUEE -->
+    <section class="marquee" aria-label="Nos domaines : design, digital, communication, stratégie, créativité, web">
+      <div class="marquee__row" data-marquee aria-hidden="true">
+        <div class="marquee__track">
+          <span>Design</span><i class="pixel"></i><span>Digital</span><i class="pixel"></i><span>Communication</span><i class="pixel"></i><span>Strategy</span><i class="pixel"></i><span>Creative</span><i class="pixel"></i><span>Web</span><i class="pixel"></i>
+        </div>
+      </div>
+      <div class="marquee__row marquee__row--outline marquee__row--reverse" data-marquee aria-hidden="true">
+        <div class="marquee__track">
+          <span>Branding</span><i class="pixel"></i><span>UI / UX</span><i class="pixel"></i><span>Print</span><i class="pixel"></i><span>Social media</span><i class="pixel"></i><span>Motion</span><i class="pixel"></i><span>Identity</span><i class="pixel"></i>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact section" id="contact" aria-labelledby="contact-title">
+      <div class="contact__glow" aria-hidden="true"></div>
+      <div class="container">
+        <header class="contact__head">
+          <p class="section-tag" data-reveal="fade">Let’s create something</p>
+          <h2 class="contact__title" id="contact-title" data-reveal="lines">
+            <span class="line"><span>Vous avez</span></span>
+            <span class="line"><span>un projet&nbsp;?</span></span>
+            <span class="line"><span>Parlons-en<i class="pixel"></i></span></span>
+          </h2>
+          <a class="btn btn--primary btn--large" href="#form-projet" data-focus-form data-magnetic data-reveal="fade"><span class="btn__label" data-text="Démarrer un projet">Démarrer un projet</span></a>
+        </header>
+
+        <div class="contact__grid">
+          <aside class="contact__info" data-reveal="fade">
+            <p class="contact__intro">Décrivez-nous votre besoin en quelques lignes. Nous revenons vers vous avec une première lecture de votre projet et les prochaines étapes.</p>
+            <dl class="contact__details">
+              <div><dt>Email</dt><dd><a class="u-link" href="#contact" data-contact="email">[EMAIL]</a></dd></div>
+              <div><dt>Téléphone</dt><dd><a class="u-link" href="#contact" data-contact="phone">[TELEPHONE]</a></dd></div>
+            </dl>
+            <ul class="social social--list" aria-label="Réseaux sociaux">
+              <li><a class="social__link" href="#contact" data-social="instagram" aria-label="Instagram (nouvel onglet)"><svg class="icon" aria-hidden="true"><use href="#i-instagram"></use></svg><span class="social__name">Instagram</span></a></li>
+      <li><a class="social__link" href="#contact" data-social="facebook" aria-label="Facebook (nouvel onglet)"><svg class="icon" aria-hidden="true"><use href="#i-facebook"></use></svg><span class="social__name">Facebook</span></a></li>
+      <li><a class="social__link" href="#contact" data-social="snapchat" aria-label="Snapchat (nouvel onglet)"><svg class="icon" aria-hidden="true"><use href="#i-snapchat"></use></svg><span class="social__name">Snapchat</span></a></li>
+      <li><a class="social__link" href="#contact" data-social="whatsapp" aria-label="WhatsApp (nouvel onglet)"><svg class="icon" aria-hidden="true"><use href="#i-whatsapp"></use></svg><span class="social__name">WhatsApp</span></a></li>
+            </ul>
+          </aside>
+
+          <form class="form" id="form-projet" novalidate data-form aria-labelledby="form-title">
+            <h3 class="visually-hidden" id="form-title">Formulaire de demande de projet</h3>
+            <div class="form__row">
+              <div class="field">
+                <label for="f-nom">Nom <span class="req" aria-hidden="true">*</span></label>
+                <input id="f-nom" name="nom" type="text" autocomplete="family-name" required aria-describedby="e-nom">
+                <p class="field__error" id="e-nom"></p>
+              </div>
+              <div class="field">
+                <label for="f-prenom">Prénom <span class="req" aria-hidden="true">*</span></label>
+                <input id="f-prenom" name="prenom" type="text" autocomplete="given-name" required aria-describedby="e-prenom">
+                <p class="field__error" id="e-prenom"></p>
+              </div>
+            </div>
+            <div class="form__row">
+              <div class="field">
+                <label for="f-entreprise">Entreprise <span class="opt">(facultatif)</span></label>
+                <input id="f-entreprise" name="entreprise" type="text" autocomplete="organization">
+              </div>
+              <div class="field">
+                <label for="f-tel">Téléphone <span class="opt">(facultatif)</span></label>
+                <input id="f-tel" name="telephone" type="tel" autocomplete="tel" inputmode="tel" aria-describedby="e-tel">
+                <p class="field__error" id="e-tel"></p>
+              </div>
+            </div>
+            <div class="field">
+              <label for="f-email">Email <span class="req" aria-hidden="true">*</span></label>
+              <input id="f-email" name="email" type="email" autocomplete="email" required aria-describedby="e-email">
+              <p class="field__error" id="e-email"></p>
+            </div>
+
+            <fieldset class="field field--chips" aria-describedby="e-type">
+              <legend>Type de projet <span class="req" aria-hidden="true">*</span></legend>
+              <div class="chips">
+                <label class="chip"><input type="radio" name="type" value="Site web" required><span>Site web</span></label>
+                <label class="chip"><input type="radio" name="type" value="Communication"><span>Communication</span></label>
+                <label class="chip"><input type="radio" name="type" value="Identité visuelle"><span>Identité visuelle</span></label>
+                <label class="chip"><input type="radio" name="type" value="Flyer"><span>Flyer</span></label>
+                <label class="chip"><input type="radio" name="type" value="Carte de visite"><span>Carte de visite</span></label>
+                <label class="chip"><input type="radio" name="type" value="Réseaux sociaux"><span>Réseaux sociaux</span></label>
+                <label class="chip"><input type="radio" name="type" value="Autre"><span>Autre</span></label>
+              </div>
+              <p class="field__error" id="e-type"></p>
+            </fieldset>
+
+            <div class="field">
+              <label for="f-budget">Budget</label>
+              <div class="select">
+                <select id="f-budget" name="budget" data-budget-select>
+                  <option value="">Sélectionnez une fourchette</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="f-message">Message <span class="req" aria-hidden="true">*</span></label>
+              <textarea id="f-message" name="message" rows="5" required minlength="10" aria-describedby="e-message" placeholder="Votre projet, vos objectifs, vos délais…"></textarea>
+              <p class="field__error" id="e-message"></p>
+            </div>
+
+            <div class="field field--hp" aria-hidden="true">
+              <label for="f-site">Ne pas remplir</label>
+              <input id="f-site" name="site_web" type="text" tabindex="-1" autocomplete="off">
+            </div>
+
+            <div class="field field--check">
+              <input id="f-rgpd" name="rgpd" type="checkbox" required aria-describedby="e-rgpd">
+              <label for="f-rgpd">J’accepte que mes données soient utilisées pour être recontacté(e) au sujet de ma demande, conformément à la <a class="u-link" href="/politique-confidentialite.html" data-legal="confidentialite">politique de confidentialité</a>. <span class="req" aria-hidden="true">*</span></label>
+              <p class="field__error" id="e-rgpd"></p>
+            </div>
+
+            <div class="form__submit">
+              <button class="btn btn--primary btn--large" type="submit" data-magnetic><span class="btn__label" data-text="Envoyer ma demande">Envoyer ma demande</span></button>
+              <p class="form__note"><span aria-hidden="true">*</span> Champs obligatoires</p>
+            </div>
+            <p class="form__status" role="status" aria-live="polite" data-form-status></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <dialog class="sheet" data-sheet aria-labelledby="sheet-title">
+    <div class="sheet__inner">
+      <button class="sheet__close" type="button" data-sheet-close><span class="visually-hidden">Fermer</span><svg class="icon" aria-hidden="true"><use href="#i-close"></use></svg></button>
+      <div class="sheet__content" data-sheet-content></div>
+    </div>
+  </dialog>
+
+  <footer class="footer">
+  <div class="footer__top container">
+    <div class="footer__brand">
+      <p class="footer__tagline">Studio créatif indépendant. Communication, web et design pour les marques qui veulent qu’on se souvienne d’elles.</p>
+      <ul class="footer__words" aria-label="Domaines">
+        <li>Communication</li>
+        <li>Web Design</li>
+        <li>Digital</li>
+        <li>Creative Studio</li>
+      </ul>
+    </div>
+
+    <nav class="footer__col" aria-label="Navigation du pied de page">
+      <h2 class="footer__title">Navigation</h2>
+      <ul>
+        <li><a class="u-link" href="#services">Services</a></li>
+        <li><a class="u-link" href="#projets">Projets</a></li>
+        <li><a class="u-link" href="#studio">Studio</a></li>
+        <li><a class="u-link" href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="footer__col">
+      <h2 class="footer__title">Social</h2>
+      <ul class="social social--list" aria-label="Réseaux sociaux">
+        <li><a class="social__link" href="#contact" data-social="instagram" aria-label="Instagram (nouvel onglet)"><svg class="icon" aria-hidden="true"><use href="#i-instagram"></use></svg><span class="social__name">Instagram</span></a></li>
+      <li><a class="social__link" href="#contact" data-social="facebook" aria-label="Facebook (nouvel onglet)"><svg class="icon" aria-hidden="true"><use href="#i-facebook"></use></svg><span class="social__name">Facebook</span></a></li>
+      <li><a class="social__link" href="#contact" data-social="snapchat" aria-label="Snapchat (nouvel onglet)"><svg class="icon" aria-hidden="true"><use href="#i-snapchat"></use></svg><span class="social__name">Snapchat</span></a></li>
+      <li><a class="social__link" href="#contact" data-social="whatsapp" aria-label="WhatsApp (nouvel onglet)"><svg class="icon" aria-hidden="true"><use href="#i-whatsapp"></use></svg><span class="social__name">WhatsApp</span></a></li>
+      </ul>
+    </div>
+
+    <div class="footer__col">
+      <h2 class="footer__title">Contact</h2>
+      <ul>
+        <li><a class="u-link" href="#contact" data-contact="email">[EMAIL]</a></li>
+        <li><a class="u-link" href="#contact" data-contact="phone">[TELEPHONE]</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <p class="footer__wordmark" aria-hidden="true"><span>AC</span><i class="pixel"></i><span>Digital Studio</span></p>
+
+  <div class="footer__bottom container">
+    <p>© <span data-year>2026</span> AC Digital Studio. Tous droits réservés.</p>
+    <ul class="footer__legal">
+      <li><a class="u-link" href="/mentions-legales.html" data-legal="mentions">Mentions légales</a></li>
+      <li><a class="u-link" href="/politique-confidentialite.html" data-legal="confidentialite">Politique de confidentialité</a></li>
+    </ul>
+    <a class="footer__top-link" href="#contenu" data-back-top>
+      Haut de page <svg class="icon" aria-hidden="true"><use href="#i-arrow-up"></use></svg>
+    </a>
+  </div>
+</footer>
+
+<a class="wa-float" href="#contact" data-social="whatsapp" data-wa-float aria-label="Discuter sur WhatsApp (nouvel onglet)">
+  <svg class="icon" aria-hidden="true"><use href="#i-whatsapp"></use></svg>
+</a>
+
+<div class="toast" role="status" aria-live="polite" data-toast></div>
+
+<div class="page-curtain" aria-hidden="true"></div>
+<div class="cursor" aria-hidden="true" data-cursor-root><span class="cursor__ring"><span class="cursor__label">View</span></span><span class="cursor__dot"></span></div>
+<template id="tpl-legal-mentions"><div class="legal"><div class="legal__inner">
+  <h1 id="legal-mentions-title">Mentions légales</h1>
+  <p class="legal__updated">Dernière mise à jour&nbsp;: [DATE]</p>
+
+  <h2>Éditeur du site</h2>
+  <p>Le site AC Digital Studio est édité par&nbsp;:</p>
+  <ul>
+    <li><strong>Raison sociale / nom&nbsp;:</strong> [RAISON SOCIALE OU NOM ET PRÉNOM]</li>
+    <li><strong>Forme juridique&nbsp;:</strong> [FORME JURIDIQUE, ex. micro-entreprise, SASU…]</li>
+    <li><strong>Adresse&nbsp;:</strong> [ADRESSE]</li>
+    <li><strong>SIRET&nbsp;:</strong> [SIRET]</li>
+    <li><strong>Numéro de TVA intracommunautaire&nbsp;:</strong> [NUMÉRO DE TVA ou « TVA non applicable, art. 293 B du CGI »]</li>
+    <li><strong>Email&nbsp;:</strong> [EMAIL]</li>
+    <li><strong>Téléphone&nbsp;:</strong> [TELEPHONE]</li>
+    <li><strong>Directeur ou directrice de la publication&nbsp;:</strong> [NOM]</li>
+  </ul>
+
+  <h2>Hébergement</h2>
+  <ul>
+    <li><strong>Hébergeur&nbsp;:</strong> [NOM DE L’HÉBERGEUR]</li>
+    <li><strong>Adresse&nbsp;:</strong> [ADRESSE DE L’HÉBERGEUR]</li>
+    <li><strong>Contact&nbsp;:</strong> [TÉLÉPHONE OU SITE DE L’HÉBERGEUR]</li>
+  </ul>
+
+  <h2>Propriété intellectuelle</h2>
+  <p>L’ensemble des contenus de ce site (textes, visuels, identité graphique, mise en page, code) est la propriété d’AC Digital Studio ou de ses partenaires, sauf mention contraire. Toute reproduction, représentation ou adaptation, totale ou partielle, sans autorisation écrite préalable est interdite.</p>
+  <p>Les réalisations présentées dans la section Projets restent la propriété de leurs clients respectifs et sont présentées avec leur accord.</p>
+
+  <h2>Responsabilité</h2>
+  <p>AC Digital Studio s’efforce de fournir des informations exactes et à jour, sans pouvoir garantir l’absence d’erreur. Les liens vers des sites tiers (réseaux sociaux notamment) sont fournis à titre pratique&nbsp;: leur contenu relève de la responsabilité de leurs éditeurs.</p>
+
+  <h2>Données personnelles</h2>
+  <p>Le traitement des données transmises via le formulaire de contact est détaillé dans la <a href="/politique-confidentialite.html" data-legal="confidentialite">politique de confidentialité</a>.</p>
+</div>
+</div></template>
+<template id="tpl-legal-confidentialite"><div class="legal"><div class="legal__inner">
+  <h1 id="legal-confidentialite-title">Politique de confidentialité</h1>
+  <p class="legal__updated">Dernière mise à jour&nbsp;: [DATE]</p>
+
+  <h2>Responsable du traitement</h2>
+  <p>[RAISON SOCIALE OU NOM ET PRÉNOM], AC Digital Studio, [ADRESSE]. Contact&nbsp;: [EMAIL].</p>
+
+  <h2>Données collectées</h2>
+  <p>Via le formulaire de contact, nous collectons uniquement les informations que vous choisissez de nous transmettre&nbsp;: nom, prénom, entreprise, adresse email, téléphone, type de projet, budget indicatif et message. Les champs entreprise, téléphone et budget sont facultatifs.</p>
+
+  <h2>Finalité et base légale</h2>
+  <p>Ces données servent exclusivement à répondre à votre demande et à échanger avec vous au sujet de votre projet. Le traitement repose sur votre consentement, exprimé en cochant la case prévue à cet effet avant l’envoi du formulaire.</p>
+
+  <h2>Destinataires</h2>
+  <p>Les données sont destinées à AC Digital Studio uniquement. Elles ne sont ni vendues, ni cédées à des tiers. Le cas échéant, elles transitent par le prestataire technique d’envoi de formulaire&nbsp;: [NOM DU PRESTATAIRE, ex. Formspree], qui agit en tant que sous-traitant.</p>
+
+  <h2>Durée de conservation</h2>
+  <p>[DURÉE DE CONSERVATION, à définir]. Sans suite donnée à votre demande, les données sont supprimées à l’issue de cette durée.</p>
+
+  <h2>Vos droits</h2>
+  <p>Conformément au RGPD et à la loi Informatique et Libertés, vous disposez d’un droit d’accès, de rectification, d’effacement, de limitation, d’opposition et de portabilité de vos données, ainsi que du droit de retirer votre consentement à tout moment. Pour les exercer, écrivez à [EMAIL].</p>
+  <p>Si vous estimez que vos droits ne sont pas respectés, vous pouvez adresser une réclamation à la CNIL (<a href="https://www.cnil.fr" target="_blank" rel="noopener noreferrer">cnil.fr</a>).</p>
+
+  <h2>Cookies et stockage local</h2>
+  <p>Ce site n’utilise pas de cookie publicitaire ni de mesure d’audience. Un indicateur technique est conservé dans le stockage de session de votre navigateur pour ne pas rejouer l’animation d’introduction pendant votre visite&nbsp;; il disparaît à la fermeture de l’onglet.</p>
+  <p>Les polices de caractères sont chargées depuis Google Fonts, ce qui transmet votre adresse IP à Google. [À SUPPRIMER si les polices sont hébergées localement, voir le fichier README.]</p>
+
+  <h2>Liens externes</h2>
+  <p>Les liens vers Instagram, Facebook, Snapchat et WhatsApp vous redirigent vers ces plateformes, qui appliquent leurs propres politiques de confidentialité.</p>
+</div>
+</div></template>
+</body>
+</html>
